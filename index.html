@@ -4,9 +4,9 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>ÉLEVÉ | Pole Dance Studio</title>
+<title>AVA STUDIO | Pole Dance</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600&family=Playfair+Display:wght@400;500&display=swap" rel="stylesheet">
 
 <style>
 * {
@@ -17,180 +17,185 @@
 
 body {
     font-family: 'DM Sans', sans-serif;
-    background: #f5f3ef;
-    color: #383733;
+    background: #f4f1eb;
+    color: #393833;
 }
 
 nav {
-    height: 85px;
+    height: 90px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 8%;
-    background: #f5f3ef;
+    padding: 0 9%;
 }
 
 .logo {
     font-family: 'Playfair Display', serif;
-    font-size: 30px;
-    letter-spacing: 5px;
+    font-size: 32px;
+    letter-spacing: 7px;
 }
 
 nav a {
     text-decoration: none;
     color: #55514b;
-    margin-left: 35px;
-    font-size: 12px;
+    margin-left: 30px;
+    font-size: 11px;
     letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .hero {
-    min-height: 650px;
-    background: linear-gradient(
-        rgba(30, 29, 27, 0.35),
-        rgba(30, 29, 27, 0.35)
-    ), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1800');
-    background-size: cover;
-    background-position: center;
+    min-height: 680px;
+    background: linear-gradient(135deg, #ded9d0, #c9c4bb, #e9e5df);
     display: flex;
+    justify-content: center;
     align-items: center;
-    padding: 8%;
-    color: white;
+    text-align: center;
+    padding: 40px 20px;
 }
 
 .hero-content {
-    max-width: 650px;
+    max-width: 750px;
 }
 
-.small-title {
-    font-size: 12px;
-    letter-spacing: 5px;
-    text-transform: uppercase;
-    margin-bottom: 25px;
-}
-
-.hero h1 {
+.hero-logo {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(48px, 7vw, 85px);
+    font-size: clamp(75px, 13vw, 145px);
     font-weight: 400;
-    line-height: 1.1;
-    margin-bottom: 25px;
+    letter-spacing: 18px;
+    color: #46443f;
+}
+
+.hero-subtitle {
+    letter-spacing: 9px;
+    font-size: 13px;
+    margin-top: 5px;
+    color: #55514b;
+}
+
+.line {
+    width: 65px;
+    height: 1px;
+    background: #827b70;
+    margin: 35px auto;
 }
 
 .hero p {
-    font-size: 16px;
-    font-weight: 300;
-    line-height: 1.8;
-    max-width: 450px;
+    font-size: 15px;
+    line-height: 2;
+    color: #55514b;
     margin-bottom: 35px;
 }
 
 .button {
     display: inline-block;
-    background: #e8e1d7;
-    color: #383733;
-    padding: 17px 35px;
+    padding: 17px 38px;
+    background: #46443f;
+    color: white;
     text-decoration: none;
     font-size: 11px;
     letter-spacing: 2px;
-    text-transform: uppercase;
     transition: 0.3s;
 }
 
 .button:hover {
-    background: white;
+    background: #777166;
 }
 
-.intro {
-    padding: 110px 10%;
+.about {
     text-align: center;
+    padding: 110px 10%;
 }
 
-.intro h2 {
+.about h2 {
     font-family: 'Playfair Display', serif;
-    font-size: 48px;
+    font-size: 45px;
     font-weight: 400;
     margin-bottom: 25px;
 }
 
-.intro p {
-    max-width: 650px;
+.about p {
+    max-width: 620px;
     margin: auto;
-    line-height: 2;
     color: #77736c;
-    font-size: 15px;
+    line-height: 2;
+    font-size: 14px;
 }
 
-.features {
+.classes {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-    padding: 0 8% 100px;
+    gap: 20px;
+    padding: 0 8% 110px;
 }
 
-.feature {
-    background: #e9e5de;
-    padding: 45px 30px;
+.card {
+    background: #e6e1d8;
+    padding: 55px 25px;
     text-align: center;
+    transition: 0.3s;
 }
 
-.feature h3 {
+.card:hover {
+    background: #ddd6ca;
+    transform: translateY(-5px);
+}
+
+.card h3 {
     font-family: 'Playfair Display', serif;
-    font-size: 25px;
+    font-size: 27px;
     font-weight: 400;
-    margin-bottom: 15px;
+    margin-bottom: 18px;
 }
 
-.feature p {
+.card p {
+    font-size: 13px;
     color: #77736c;
-    font-size: 14px;
-    line-height: 1.8;
+    line-height: 1.9;
 }
 
-.quote {
-    background: #d8d2c9;
+.banner {
+    background: #d4cec4;
+    padding: 90px 20px;
     text-align: center;
-    padding: 90px 10%;
 }
 
-.quote h2 {
+.banner h2 {
     font-family: 'Playfair Display', serif;
+    font-size: 42px;
     font-weight: 400;
-    font-size: 40px;
-    line-height: 1.4;
 }
 
 footer {
     background: #393833;
     color: white;
     text-align: center;
-    padding: 45px 20px;
+    padding: 55px 20px;
 }
 
 footer h2 {
     font-family: 'Playfair Display', serif;
+    letter-spacing: 8px;
+    font-size: 30px;
     font-weight: 400;
-    letter-spacing: 4px;
     margin-bottom: 15px;
 }
 
 footer p {
-    color: #c4c0b9;
-    font-size: 12px;
-    letter-spacing: 1px;
+    font-size: 11px;
+    color: #c8c3ba;
+    letter-spacing: 2px;
 }
 
 @media(max-width: 700px) {
     nav {
-        padding: 20px;
         height: auto;
-        flex-wrap: wrap;
-        gap: 15px;
+        padding: 25px 15px;
+        flex-direction: column;
+        gap: 20px;
     }
 
     nav a {
-        margin-left: 10px;
+        margin: 0 8px;
         font-size: 10px;
     }
 
@@ -198,12 +203,16 @@ footer p {
         min-height: 550px;
     }
 
-    .features {
+    .hero-logo {
+        letter-spacing: 9px;
+    }
+
+    .classes {
         grid-template-columns: 1fr;
     }
 
-    .intro h2 {
-        font-size: 36px;
+    .about h2 {
+        font-size: 35px;
     }
 }
 </style>
@@ -212,78 +221,71 @@ footer p {
 <body>
 
 <nav>
-    <div class="logo">ÉLEVÉ</div>
+    <div class="logo">AVA</div>
     <div>
-        <a href="#about">O nás</a>
-        <a href="#classes">Lekce</a>
-        <a href="#contact">Kontakt</a>
+        <a href="#about">O NÁS</a>
+        <a href="#classes">LEKCE</a>
+        <a href="#contact">KONTAKT</a>
     </div>
 </nav>
 
 <section class="hero">
     <div class="hero-content">
-        <div class="small-title">POLE DANCE • MOVEMENT • STRENGTH</div>
 
-        <h1>Objev svou sílu.<br>Najdi svou eleganci.</h1>
+        <div class="hero-logo">AVA</div>
+        <div class="hero-subtitle">P O L E  D A N C E  S T U D I O</div>
+
+        <div class="line"></div>
 
         <p>
-            Místo, kde se síla setkává s elegancí.
-            Překonej své hranice, objev nové možnosti
-            a zamiluj se do pohybu.
+            Síla, elegance a sebevědomí.<br>
+            Objev krásu pohybu a překonej své hranice.
         </p>
 
-        <a href="#classes" class="button">Objev naše lekce</a>
+        <a href="#classes" class="button">OBJEVIT STUDIO</a>
+
     </div>
 </section>
 
-<section class="intro" id="about">
-    <h2>Více než jen pohyb.</h2>
+<section class="about" id="about">
+    <h2>Welcome to AVA Studio.</h2>
 
     <p>
-        Vítej v našem pole dance studiu. Vytváříme prostor,
-        kde může každý objevovat svou sílu, budovat sebevědomí
-        a posouvat své hranice. Nezáleží na zkušenostech.
-        Důležitá je chuť začít.
+        Vytvořili jsme prostor, kde se potkává pohyb,
+        síla a elegance. Ať už s pole dance začínáš,
+        nebo máš zkušenosti, u nás máš prostor růst,
+        objevovat a být sama sebou.
     </p>
 </section>
 
-<section class="features" id="classes">
+<section class="classes" id="classes">
 
-    <div class="feature">
+    <div class="card">
         <h3>Pole Dance</h3>
-        <p>
-            Spojení tance, síly a flexibility.
-            Objev krásu pohybu na tyči.
-        </p>
+        <p>Spojení tance, síly a ladnosti.</p>
     </div>
 
-    <div class="feature">
+    <div class="card">
         <h3>Flexibility</h3>
-        <p>
-            Rozvíjej svou flexibilitu, lehkost
-            a přirozený rozsah pohybu.
-        </p>
+        <p>Rozvíjej svou flexibilitu a pohybové možnosti.</p>
     </div>
 
-    <div class="feature">
-        <h3>Exotic Dance</h3>
-        <p>
-            Poznej svou ženskost, eleganci
-            a sebevědomí prostřednictvím tance.
-        </p>
+    <div class="card">
+        <h3>Exotic</h3>
+        <p>Objev eleganci, ženskost a sebevědomí.</p>
     </div>
 
 </section>
 
-<section class="quote">
-    <h2>„Your body. Your strength.<br>Your own kind of beautiful.“</h2>
+<section class="banner">
+    <h2>Find your strength. Feel your power.</h2>
 </section>
 
 <footer id="contact">
-    <h2>ÉLEVÉ</h2>
-    <p>POLE DANCE STUDIO</p>
+    <h2>AVA STUDIO</h2>
+    <p>POLE DANCE • MOVEMENT • STRENGTH</p>
     <br>
-    <p>© 2026 ÉLEVÉ STUDIO. ALL RIGHTS RESERVED.</p>
+    <p>© 2026 AVA STUDIO</p>
 </footer>
 
 </body>
