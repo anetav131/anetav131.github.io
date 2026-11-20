@@ -1,21 +1,290 @@
 
 <!DOCTYPE html>
-<html>
+<html lang="cs">
 <head>
-    <title>Můj web</title>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ÉLEVÉ | Pole Dance Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'DM Sans', sans-serif;
+    background: #f5f3ef;
+    color: #383733;
+}
+
+nav {
+    height: 85px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 8%;
+    background: #f5f3ef;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    letter-spacing: 5px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #55514b;
+    margin-left: 35px;
+    font-size: 12px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.hero {
+    min-height: 650px;
+    background: linear-gradient(
+        rgba(30, 29, 27, 0.35),
+        rgba(30, 29, 27, 0.35)
+    ), url('https://images.unsplash.com/photo-1518611012118-696072aa579a?w=1800');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 12px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    margin-bottom: 25px;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(48px, 7vw, 85px);
+    font-weight: 400;
+    line-height: 1.1;
+    margin-bottom: 25px;
+}
+
+.hero p {
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.8;
+    max-width: 450px;
+    margin-bottom: 35px;
+}
+
+.button {
+    display: inline-block;
+    background: #e8e1d7;
+    color: #383733;
+    padding: 17px 35px;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: white;
+}
+
+.intro {
+    padding: 110px 10%;
+    text-align: center;
+}
+
+.intro h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+
+.intro p {
+    max-width: 650px;
+    margin: auto;
+    line-height: 2;
+    color: #77736c;
+    font-size: 15px;
+}
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    padding: 0 8% 100px;
+}
+
+.feature {
+    background: #e9e5de;
+    padding: 45px 30px;
+    text-align: center;
+}
+
+.feature h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin-bottom: 15px;
+}
+
+.feature p {
+    color: #77736c;
+    font-size: 14px;
+    line-height: 1.8;
+}
+
+.quote {
+    background: #d8d2c9;
+    text-align: center;
+    padding: 90px 10%;
+}
+
+.quote h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    font-size: 40px;
+    line-height: 1.4;
+}
+
+footer {
+    background: #393833;
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+footer h2 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 400;
+    letter-spacing: 4px;
+    margin-bottom: 15px;
+}
+
+footer p {
+    color: #c4c0b9;
+    font-size: 12px;
+    letter-spacing: 1px;
+}
+
+@media(max-width: 700px) {
+    nav {
+        padding: 20px;
+        height: auto;
+        flex-wrap: wrap;
+        gap: 15px;
+    }
+
+    nav a {
+        margin-left: 10px;
+        font-size: 10px;
+    }
+
+    .hero {
+        min-height: 550px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    .intro h2 {
+        font-size: 36px;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>Můj školní projekt</h1>
+<nav>
+    <div class="logo">ÉLEVÉ</div>
+    <div>
+        <a href="#about">O nás</a>
+        <a href="#classes">Lekce</a>
+        <a href="#contact">Kontakt</a>
+    </div>
+</nav>
 
-    <p>Ahoj! Vítej na mém webu.</p>
+<section class="hero">
+    <div class="hero-content">
+        <div class="small-title">POLE DANCE • MOVEMENT • STRENGTH</div>
 
-    <p>Toto je můj veřejný školní projekt.</p>
+        <h1>Objev svou sílu.<br>Najdi svou eleganci.</h1>
 
-    <p>Na tomto webu najdeš zajímavé informace.</p>
+        <p>
+            Místo, kde se síla setkává s elegancí.
+            Překonej své hranice, objev nové možnosti
+            a zamiluj se do pohybu.
+        </p>
 
-    <h2>Děkuji za návštěvu!</h2>
+        <a href="#classes" class="button">Objev naše lekce</a>
+    </div>
+</section>
+
+<section class="intro" id="about">
+    <h2>Více než jen pohyb.</h2>
+
+    <p>
+        Vítej v našem pole dance studiu. Vytváříme prostor,
+        kde může každý objevovat svou sílu, budovat sebevědomí
+        a posouvat své hranice. Nezáleží na zkušenostech.
+        Důležitá je chuť začít.
+    </p>
+</section>
+
+<section class="features" id="classes">
+
+    <div class="feature">
+        <h3>Pole Dance</h3>
+        <p>
+            Spojení tance, síly a flexibility.
+            Objev krásu pohybu na tyči.
+        </p>
+    </div>
+
+    <div class="feature">
+        <h3>Flexibility</h3>
+        <p>
+            Rozvíjej svou flexibilitu, lehkost
+            a přirozený rozsah pohybu.
+        </p>
+    </div>
+
+    <div class="feature">
+        <h3>Exotic Dance</h3>
+        <p>
+            Poznej svou ženskost, eleganci
+            a sebevědomí prostřednictvím tance.
+        </p>
+    </div>
+
+</section>
+
+<section class="quote">
+    <h2>„Your body. Your strength.<br>Your own kind of beautiful.“</h2>
+</section>
+
+<footer id="contact">
+    <h2>ÉLEVÉ</h2>
+    <p>POLE DANCE STUDIO</p>
+    <br>
+    <p>© 2026 ÉLEVÉ STUDIO. ALL RIGHTS RESERVED.</p>
+</footer>
 
 </body>
 </html>
