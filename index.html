@@ -4,165 +4,149 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AVA. | Movement Studio</title>
-
+<title>AVA Studio | Praha</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
 * { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-    background:#eae5dd;
-    color:#302e2a;
+    background:#eeeae4;
+    color:#34312d;
     font-family:'DM Sans',sans-serif;
-    min-height:100vh;
 }
 
 header {
-    height:95px;
+    height:90px;
     padding:0 9%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
-    border-bottom:1px solid #d6cec3;
+    justify-content:space-between;
+    border-bottom:1px solid #d9d2c8;
 }
 
 .logo {
     font-family:'Playfair Display',serif;
-    font-size:38px;
-    letter-spacing:7px;
+    font-size:34px;
+    letter-spacing:6px;
 }
 
-.logo span { color:#aa9983; }
+.logo span { color:#a99a85; }
 
-.header-label {
+.header-info {
     font-size:9px;
-    letter-spacing:3px;
-    color:#83796d;
+    letter-spacing:2px;
+    color:#81796f;
 }
 
-.hero {
-    min-height:650px;
-    padding:65px 9%;
+main {
+    min-height:calc(100vh - 155px);
     display:grid;
-    grid-template-columns:1.1fr .9fr;
+    grid-template-columns:1fr 1fr;
     align-items:center;
-    gap:35px;
+    padding:65px 9%;
+    gap:55px;
 }
 
-.eyebrow {
+.label {
     font-size:10px;
-    letter-spacing:4px;
-    color:#998873;
-    margin-bottom:30px;
+    letter-spacing:3px;
+    color:#9a8873;
+    margin-bottom:25px;
 }
 
 h1 {
     font-family:'Playfair Display',serif;
     font-weight:400;
-    font-size:clamp(65px,8vw,110px);
-    line-height:.98;
-    letter-spacing:-3px;
+    font-size:clamp(65px,8vw,105px);
+    line-height:1.03;
 }
 
 h1 em {
-    color:#a3927c;
+    color:#a4937e;
     font-weight:400;
 }
 
-.subtitle {
-    margin-top:35px;
-    font-size:11px;
-    letter-spacing:4px;
-    color:#81776b;
+.description {
+    margin-top:28px;
+    max-width:420px;
+    font-size:13px;
+    line-height:2;
+    color:#777168;
 }
 
-.enter {
+.link {
     display:inline-block;
-    margin-top:42px;
-    padding:19px 34px;
-    background:#302e2a;
+    margin-top:36px;
+    padding:16px 27px;
+    background:#34312d;
     color:white;
     text-decoration:none;
     font-size:10px;
     letter-spacing:2px;
-    transition:.35s;
+    transition:.3s;
 }
 
-.enter:hover {
-    background:#a3927c;
-    transform:translateY(-5px);
+.link:hover {
+    background:#9e8d78;
+    transform:translateY(-3px);
 }
 
-.art {
-    height:440px;
-    background:#d6ccbd;
-    position:relative;
+.visual {
+    height:460px;
+    background:#d8cfc2;
     display:flex;
-    justify-content:center;
     align-items:center;
+    justify-content:center;
+    position:relative;
     overflow:hidden;
-    animation:appear 1.2s ease;
 }
 
-.art::before {
+.visual::before {
     content:"";
-    position:absolute;
-    width:270px;
-    height:360px;
+    width:68%;
+    height:80%;
     border:1px solid rgba(255,255,255,.8);
-    border-radius:160px 160px 0 0;
+    border-radius:180px 180px 0 0;
+    position:absolute;
 }
 
-.art::after {
-    content:"A";
+.visual::after {
+    content:"AVA";
     font-family:'Playfair Display',serif;
-    font-size:340px;
+    font-size:clamp(65px,10vw,130px);
     font-style:italic;
-    color:rgba(255,255,255,.3);
+    color:rgba(255,255,255,.5);
+    letter-spacing:5px;
 }
 
-.art-caption {
+.visual small {
     position:absolute;
-    bottom:25px;
-    left:25px;
+    bottom:22px;
+    left:22px;
     font-size:9px;
-    letter-spacing:3px;
+    letter-spacing:2px;
     color:#514a40;
-}
-
-.side-number {
-    position:absolute;
-    right:9%;
-    top:45%;
-    writing-mode:vertical-rl;
-    font-size:9px;
-    letter-spacing:4px;
-    color:#a39480;
 }
 
 footer {
     padding:25px 9%;
-    border-top:1px solid #d6cec3;
     display:flex;
     justify-content:space-between;
-    color:#82796d;
+    border-top:1px solid #d9d2c8;
+    color:#81796f;
     font-size:9px;
     letter-spacing:2px;
 }
 
-@keyframes appear {
-    from { opacity:0; transform:translateY(20px); }
-    to { opacity:1; transform:translateY(0); }
-}
-
 @media(max-width:750px) {
-    .hero { grid-template-columns:1fr; padding:65px 7%; }
-    .art { height:330px; }
-    h1 { font-size:70px; }
+    main {
+        grid-template-columns:1fr;
+        padding:60px 7%;
+    }
+    .visual { height:310px; }
+    h1 { font-size:72px; }
     header { padding:0 7%; }
-    .header-label { font-size:7px; letter-spacing:1px; }
-    .side-number { display:none; }
     footer { gap:12px; flex-wrap:wrap; }
 }
 </style>
@@ -172,42 +156,36 @@ footer {
 
 <header>
     <div class="logo">AVA<span>.</span></div>
-    <div class="header-label">POLE DANCE & MOVEMENT STUDIO</div>
+    <div class="header-info">MOVEMENT STUDIO · PRAHA 1</div>
 </header>
 
 <main>
-<section class="hero">
-
     <div>
-        <div class="eyebrow">EST. IN PRAGUE · PRAHA 1</div>
+        <div class="label">POLE DANCE & MOVEMENT STUDIO</div>
 
         <h1>
-            MOVE<br>
-            WITH<br>
-            <em>CONFIDENCE.</em>
+            Movement<br>
+            <em>in balance.</em>
         </h1>
 
-        <div class="subtitle">
-            STRENGTH · ELEGANCE · MOVEMENT
-        </div>
+        <p class="description">
+            Studio pro pole dance, aerial hoop a funkční pohyb.
+            Tři sály, individuální přístup a lekce pro různé úrovně.
+        </p>
 
-        <a href="/prvnihodina.html" class="enter">
-            ENTER THE WORLD OF AVA &nbsp; ↗
+        <a class="link" href="/prvnihodina.html">
+            VSTOUPIT DO STUDIA &nbsp; ↗
         </a>
     </div>
 
-    <div class="art">
-        <div class="art-caption">AVA STUDIO · PRAGUE</div>
+    <div class="visual">
+        <small>AVA STUDIO / PRAGUE</small>
     </div>
-
-</section>
-
-<div class="side-number">POLE DANCE · AERIAL · FITNESS</div>
 </main>
 
 <footer>
-    <span>AVA. MOVEMENT STUDIO</span>
-    <span>PRAGUE · CZECH REPUBLIC</span>
+    <span>AVA STUDIO</span>
+    <span>POLE · AERIAL · MOVEMENT</span>
 </footer>
 
 </body>
