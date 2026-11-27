@@ -1,21 +1,23 @@
 
+
 <!DOCTYPE html>
 <html lang="cs">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AVA. | Naše studio</title>
+<title>AVA Studio | Pole Dance Praha 1</title>
 
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
 :root {
-    --cream:#eeeae3;
-    --beige:#dcd2c4;
-    --white:#fffefa;
-    --dark:#302e2a;
-    --grey:#81796f;
-    --line:#ded8ce;
+    --bg:#faf9f6;
+    --cream:#efebe4;
+    --beige:#d9cfc1;
+    --dark:#34312d;
+    --grey:#79736a;
+    --line:#ded9d0;
+    --accent:#a28f77;
 }
 
 * { margin:0; padding:0; box-sizing:border-box; }
@@ -23,48 +25,49 @@
 html { scroll-behavior:smooth; }
 
 body {
-    background:var(--white);
-    color:var(--dark);
     font-family:'DM Sans',sans-serif;
+    color:var(--dark);
+    background:var(--bg);
     line-height:1.7;
 }
 
 a { color:inherit; text-decoration:none; }
 
 header {
-    height:85px;
-    padding:0 7%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    background:var(--white);
-    border-bottom:1px solid var(--line);
     position:sticky;
     top:0;
-    z-index:10;
+    z-index:20;
+    height:80px;
+    padding:0 7%;
+    background:rgba(250,249,246,.96);
+    border-bottom:1px solid var(--line);
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
 }
 
 .logo {
     font-family:'Playfair Display',serif;
-    font-size:35px;
+    font-size:33px;
     letter-spacing:5px;
 }
 
-.logo span { color:#aa9983; }
+.logo span { color:var(--accent); }
 
 nav {
     display:flex;
+    align-items:center;
     gap:23px;
 }
 
 nav a {
     font-size:10px;
-    letter-spacing:1px;
     text-transform:uppercase;
-    transition:.3s;
+    letter-spacing:1px;
+    color:#625d55;
 }
 
-nav a:hover { color:#a18d75; }
+nav a:hover { color:var(--accent); }
 
 .menu {
     display:none;
@@ -75,20 +78,21 @@ nav a:hover { color:#a18d75; }
 }
 
 .hero {
+    min-height:530px;
     background:var(--cream);
-    padding:105px 9%;
-    min-height:490px;
+    padding:100px 9%;
     display:flex;
     align-items:center;
 }
 
-.hero-content { max-width:720px; }
+.hero-content { max-width:670px; }
 
 .eyebrow {
     font-size:10px;
-    letter-spacing:4px;
-    color:#998873;
-    margin-bottom:20px;
+    text-transform:uppercase;
+    letter-spacing:3px;
+    color:var(--accent);
+    margin-bottom:22px;
 }
 
 h1,h2,h3 {
@@ -98,23 +102,25 @@ h1,h2,h3 {
 }
 
 .hero h1 {
-    font-size:clamp(50px,7vw,82px);
+    font-size:clamp(48px,7vw,76px);
 }
 
-.hero h1 em { color:#a18f79; }
+.hero h1 em {
+    color:var(--accent);
+}
 
 .hero p {
     color:var(--grey);
-    max-width:490px;
-    margin:25px 0;
+    max-width:460px;
     font-size:14px;
+    margin:23px 0 30px;
 }
 
 .button {
     display:inline-block;
     background:var(--dark);
     color:white;
-    padding:14px 26px;
+    padding:14px 25px;
     font-size:10px;
     letter-spacing:1.5px;
     text-transform:uppercase;
@@ -122,11 +128,11 @@ h1,h2,h3 {
 }
 
 .button:hover {
-    background:#a18f79;
+    background:var(--accent);
     transform:translateY(-3px);
 }
 
-section { padding:90px 9%; }
+section { padding:85px 9%; }
 
 .heading {
     text-align:center;
@@ -134,80 +140,85 @@ section { padding:90px 9%; }
     margin:0 auto 48px;
 }
 
-.heading h2 { font-size:clamp(36px,5vw,52px); }
+.heading h2 { font-size:clamp(35px,5vw,49px); }
 
 .heading p {
-    color:var(--grey);
     font-size:13px;
-    margin-top:15px;
+    color:var(--grey);
+    margin-top:14px;
 }
 
-.about { background:var(--white); }
+/* STUDIO */
 
 .studio-grid {
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .studio-card {
-    padding:32px;
     background:var(--cream);
+    padding:32px;
+    min-height:240px;
     border:1px solid var(--line);
     transition:.3s;
 }
 
-.studio-card:hover { transform:translateY(-5px); }
+.studio-card:hover {
+    transform:translateY(-5px);
+}
 
 .number {
+    color:var(--accent);
     font-family:'Playfair Display',serif;
-    color:#a99882;
     font-size:36px;
 }
 
 .studio-card h3 {
-    font-size:26px;
-    margin:15px 0;
+    font-size:25px;
+    margin:16px 0 12px;
 }
 
 .studio-card p {
     color:var(--grey);
-    font-size:13px;
+    font-size:12px;
 }
 
 .studio-card small {
     display:block;
-    margin-top:18px;
-    letter-spacing:1px;
-    color:#9b8973;
-    font-size:10px;
+    margin-top:20px;
+    font-size:9px;
+    letter-spacing:2px;
+    color:var(--accent);
 }
 
-.classes {
-    background:var(--cream);
-}
+/* LEKCE */
 
-.class-list {
+.classes { background:var(--cream); }
+
+.class-grid {
     display:grid;
     grid-template-columns:repeat(3,1fr);
     gap:15px;
 }
 
-.class-item {
-    padding:24px;
-    background:var(--white);
+.class-card {
+    background:var(--bg);
+    padding:27px;
     border:1px solid var(--line);
 }
 
-.class-item h3 { font-size:23px; }
-
-.class-item p {
-    font-size:12px;
-    color:var(--grey);
-    margin-top:8px;
+.class-card h3 {
+    font-size:24px;
+    margin-bottom:10px;
 }
 
-.teachers { background:var(--white); }
+.class-card p {
+    font-size:12px;
+    color:var(--grey);
+}
+
+/* LEKTORKY */
 
 .teacher-grid {
     display:grid;
@@ -217,37 +228,44 @@ section { padding:90px 9%; }
 
 .teacher {
     background:var(--cream);
-    padding:28px;
-    border-bottom:2px solid #c2b39f;
+    padding:27px;
+    border:1px solid var(--line);
+    transition:.3s;
 }
 
-.teacher .initial {
-    width:60px;
-    height:60px;
-    border:1px solid #b9aa96;
-    border-radius:50%;
+.teacher:hover {
+    transform:translateY(-4px);
+}
+
+.initial {
+    width:54px;
+    height:54px;
     display:flex;
     align-items:center;
     justify-content:center;
+    border:1px solid #b9aa96;
+    border-radius:50%;
+    color:var(--accent);
     font-family:'Playfair Display',serif;
-    font-size:24px;
-    color:#8d7d68;
+    font-size:22px;
     margin-bottom:20px;
 }
 
-.teacher h3 { font-size:24px; }
+.teacher h3 { font-size:23px; }
 
-.teacher .speciality {
-    color:#9b8973;
-    font-size:10px;
-    letter-spacing:1px;
-    margin:8px 0;
+.role {
+    font-size:9px;
+    letter-spacing:1.5px;
+    color:var(--accent);
+    margin:8px 0 13px;
 }
 
 .teacher p {
-    color:var(--grey);
     font-size:12px;
+    color:var(--grey);
 }
+
+/* ROZVRH */
 
 .schedule { background:var(--cream); }
 
@@ -258,21 +276,21 @@ section { padding:90px 9%; }
 }
 
 .day {
-    background:var(--white);
+    background:var(--bg);
     padding:20px;
-    border-top:3px solid #b6a48d;
+    border-top:2px solid #b5a28a;
 }
 
 .day h3 {
     font-family:'DM Sans',sans-serif;
-    font-size:14px;
-    font-weight:700;
+    font-weight:600;
+    font-size:13px;
     margin-bottom:15px;
 }
 
 .lesson {
-    background:var(--cream);
     padding:10px;
+    background:var(--cream);
     margin-bottom:8px;
     font-size:11px;
     line-height:1.5;
@@ -280,14 +298,24 @@ section { padding:90px 9%; }
 
 .lesson strong { display:block; }
 
-.lesson span { color:var(--grey); }
+.lesson span {
+    font-size:10px;
+    color:var(--grey);
+}
 
-.pricing { background:var(--white); }
+.note {
+    font-size:11px;
+    text-align:center;
+    color:var(--grey);
+    margin-top:25px;
+}
+
+/* CENÍK */
 
 .price-grid {
     display:grid;
     grid-template-columns:repeat(3,1fr);
-    gap:20px;
+    gap:18px;
 }
 
 .price-card {
@@ -298,68 +326,96 @@ section { padding:90px 9%; }
 
 .price-card.featured {
     background:var(--cream);
-    border:1px solid #b6a48d;
+    border-color:#b5a28a;
 }
 
-.price-card h3 { font-size:24px; }
+.price-card h3 { font-size:23px; }
 
 .price {
     font-family:'Playfair Display',serif;
     font-size:39px;
-    margin:22px 0;
+    margin:20px 0;
 }
 
 .price-card p {
     font-size:12px;
     color:var(--grey);
+    min-height:65px;
 }
 
-.price-card .button { margin-top:24px; }
+.price-card small {
+    display:block;
+    color:var(--accent);
+    font-size:10px;
+    margin-top:15px;
+}
+
+/* INFORMACE */
 
 .info {
     background:var(--cream);
     display:grid;
     grid-template-columns:1fr 1fr;
-    gap:50px;
+    gap:40px;
     align-items:center;
 }
 
-.info h2 { font-size:44px; }
+.info h2 { font-size:43px; }
 
 .info p {
     color:var(--grey);
     font-size:13px;
-    margin:15px 0;
+    margin-top:16px;
 }
 
-.contact-box {
-    background:var(--white);
-    padding:35px;
+.info-box {
+    background:var(--bg);
+    padding:32px;
     border:1px solid var(--line);
 }
 
-.contact-box h3 { font-size:27px; margin-bottom:18px; }
+.info-box h3 {
+    font-size:25px;
+    margin-bottom:20px;
+}
 
-.contact-box p { margin:9px 0; }
+.info-box p {
+    margin:11px 0;
+    font-size:12px;
+}
+
+/* KONTAKT */
+
+.contact {
+    text-align:center;
+}
+
+.contact h2 { font-size:48px; }
+
+.contact p {
+    color:var(--grey);
+    font-size:13px;
+    margin:15px 0 25px;
+}
 
 footer {
+    padding:35px 9%;
     background:var(--dark);
     color:white;
-    padding:40px 9%;
     display:flex;
-    justify-content:space-between;
     align-items:center;
+    justify-content:space-between;
     flex-wrap:wrap;
     gap:20px;
 }
 
 footer p {
-    color:#c8c0b6;
     font-size:10px;
+    color:#c8c1b7;
     letter-spacing:1px;
 }
 
-footer .logo { font-size:30px; }
+footer .logo { font-size:29px; }
 
 @media(max-width:1000px) {
     nav { gap:12px; }
@@ -373,26 +429,28 @@ footer .logo { font-size:30px; }
     nav {
         display:none;
         position:absolute;
-        top:85px;
+        top:80px;
         left:0;
         right:0;
-        background:var(--white);
+        background:var(--bg);
         padding:25px;
         flex-direction:column;
+        align-items:flex-start;
         border-bottom:1px solid var(--line);
     }
     nav.open { display:flex; }
     nav a { font-size:12px; }
-    section { padding:70px 7%; }
+    section { padding:65px 7%; }
     .hero { padding:75px 7%; }
-    .studio-grid,.class-list,.teacher-grid,
+    .studio-grid,.class-grid,.teacher-grid,
     .price-grid,.info {
         grid-template-columns:1fr;
     }
 }
 
-@media(max-width:450px) {
+@media(max-width:480px) {
     .schedule-grid { grid-template-columns:1fr; }
+    .contact h2 { font-size:38px; }
 }
 </style>
 </head>
@@ -409,7 +467,7 @@ footer .logo { font-size:30px; }
         <a href="#classes" onclick="closeMenu()">Lekce</a>
         <a href="#teachers" onclick="closeMenu()">Lektorky</a>
         <a href="#schedule" onclick="closeMenu()">Rozvrh</a>
-        <a href="#pricing" onclick="closeMenu()">Ceník</a>
+        <a href="#prices" onclick="closeMenu()">Ceník</a>
         <a href="#contact" onclick="closeMenu()">Kontakt</a>
     </nav>
 </header>
@@ -420,47 +478,62 @@ footer .logo { font-size:30px; }
 
 <div class="hero">
     <div class="hero-content">
-        <div class="eyebrow">WELCOME TO AVA · PRAHA 1</div>
-        <h1>Find your strength.<br><em>Feel your power.</em></h1>
+        <div class="eyebrow">AVA STUDIO · PRAHA 1</div>
+        <h1>Prostor pro<br><em>pohyb a rozvoj.</em></h1>
         <p>
-            Místo, kde se pohyb stává zážitkem.
-            Objev pole dance, aerial hoop a fitness
-            v moderním prostoru vytvořeném pro tebe.
+            Specializované studio zaměřené na pole dance,
+            aerial hoop a funkční trénink.
+            Vyber si lekci podle svých zkušeností a cílů.
         </p>
-        <a href="#schedule" class="button">Prohlédnout rozvrh ↗</a>
+        <a href="#schedule" class="button">Zobrazit rozvrh</a>
     </div>
 </div>
 
 <!-- STUDIO -->
 
-<section id="studio" class="about">
+<section id="studio">
     <div class="heading">
-        <div class="eyebrow">OUR SPACE</div>
-        <h2>Tři sály. Jeden prostor.</h2>
-        <p>Každý sál má vlastní atmosféru a zaměření. Společně tvoří místo pro pohyb, sílu a inspiraci.</p>
+        <div class="eyebrow">O STUDIU</div>
+        <h2>Studio AVA</h2>
+        <p>
+            Tři samostatné sály navržené pro různé formy pohybu.
+            Každý nabízí vhodné vybavení a prostor pro skupinové lekce.
+        </p>
     </div>
 
     <div class="studio-grid">
 
         <div class="studio-card">
             <div class="number">01</div>
-            <h3>Pole Dance Studio</h3>
-            <p>Profesionální tyče, zrcadlové stěny a prostor pro techniku, choreografie i akrobatické prvky.</p>
-            <small>POLE · DANCE · STRENGTH</small>
+            <h3>Pole Dance Room</h3>
+            <p>
+                Hlavní taneční sál s profesionálními tyčemi,
+                zrcadlovou stěnou a prostorem pro techniku,
+                choreografie i silový trénink.
+            </p>
+            <small>POLE DANCE · TECHNIQUE · FLOW</small>
         </div>
 
         <div class="studio-card">
             <div class="number">02</div>
             <h3>Aerial Room</h3>
-            <p>Samostatný sál se závěsnými kruhy pro vzdušnou akrobacii, kreativitu a rozvoj koordinace.</p>
-            <small>AERIAL · HOOP · FLOW</small>
+            <p>
+                Sál vybavený závěsnými kruhy pro aerial hoop.
+                Zaměřuje se na akrobatické prvky, koordinaci
+                a práci s vlastním tělem.
+            </p>
+            <small>AERIAL HOOP · ACROBATICS</small>
         </div>
 
         <div class="studio-card">
             <div class="number">03</div>
-            <h3>Fitness Studio</h3>
-            <p>Vybavený sál pro funkční trénink, posilování, skupinové lekce a kondiční přípravu.</p>
-            <small>HIIT · PILATES · TRX</small>
+            <h3>Movement Room</h3>
+            <p>
+                Multifunkční prostor pro Pilates, HIIT,
+                TRX, mobilitu a silovou přípravu.
+                Vybavený pomůckami pro skupinové tréninky.
+            </p>
+            <small>FITNESS · PILATES · STRENGTH</small>
         </div>
 
     </div>
@@ -470,98 +543,142 @@ footer .logo { font-size:30px; }
 
 <section class="classes" id="classes">
     <div class="heading">
-        <div class="eyebrow">WHAT WE DO</div>
-        <h2>Najdi svůj pohyb.</h2>
-        <p>Od prvního tréninku až po pokročilé kombinace.</p>
+        <div class="eyebrow">NAŠE LEKCE</div>
+        <h2>Co u nás můžeš cvičit</h2>
+        <p>Nabídka lekcí pro začátečníky i pokročilé.</p>
     </div>
 
-    <div class="class-list">
-        <div class="class-item">
+    <div class="class-grid">
+
+        <div class="class-card">
             <h3>Pole Dance</h3>
-            <p>Tanec, akrobacie, síla a elegance na tyči. Lekce pro začátečnice i pokročilé.</p>
+            <p>Technika, taneční kombinace, akrobatické prvky a silová příprava na tyči.</p>
         </div>
-        <div class="class-item">
+
+        <div class="class-card">
             <h3>Aerial Hoop</h3>
-            <p>Vzdušná akrobacie na kruhu. Technika, flexibilita a nové pohybové možnosti.</p>
+            <p>Vzdušná akrobacie na závěsném kruhu, přechody mezi prvky a choreografie.</p>
         </div>
-        <div class="class-item">
-            <h3>HIIT</h3>
-            <p>Intenzivní intervalový trénink pro kondici a celkovou výdrž.</p>
+
+        <div class="class-card">
+            <h3>Pole Choreo</h3>
+            <p>Taneční lekce zaměřená na plynulost pohybu, výraz a práci s hudbou.</p>
         </div>
-        <div class="class-item">
+
+        <div class="class-card">
             <h3>Pilates</h3>
-            <p>Stabilita, správné držení těla, hluboký stabilizační systém a kontrola pohybu.</p>
+            <p>Posílení středu těla, stabilita, mobilita a kontrola pohybu.</p>
         </div>
-        <div class="class-item">
-            <h3>TRX</h3>
-            <p>Funkční trénink s vlastní vahou a závěsným systémem.</p>
+
+        <div class="class-card">
+            <h3>HIIT</h3>
+            <p>Intervalový kondiční trénink kombinující dynamické a silové cviky.</p>
         </div>
-        <div class="class-item">
-            <h3>Strength & Flexibility</h3>
-            <p>Posilování, mobilita a flexibilita jako základ zdravého pohybu.</p>
+
+        <div class="class-card">
+            <h3>TRX & Strength</h3>
+            <p>Funkční posilování s vlastní vahou, závěsným systémem a dalšími pomůckami.</p>
         </div>
+
     </div>
 </section>
 
 <!-- LEKTORKY -->
 
-<section class="teachers" id="teachers">
+<section id="teachers">
     <div class="heading">
-        <div class="eyebrow">MEET OUR TEAM</div>
-        <h2>Naše lektorky.</h2>
-        <p>Sedm osobností, které spojuje vášeň pro pohyb a chuť předávat zkušenosti.</p>
+        <div class="eyebrow">NÁŠ TÝM</div>
+        <h2>Lektorský tým</h2>
+        <p>
+            Sedm lektorek s různým pohybovým zaměřením.
+            Každá vede lekce ve své specializaci.
+        </p>
     </div>
 
     <div class="teacher-grid">
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">MK</div>
             <h3>Markéta Králová</h3>
-            <div class="speciality">FOUNDER · POLE DANCE</div>
-            <p>Věnuje se pole dance více než 9 let. Zaměřuje se na techniku, choreografii a individuální rozvoj. Fiktivní profil: finalistka modelové soutěže Pole Art Prague.</p>
-        </div>
+            <div class="role">POLE DANCE · ZAKLADATELKA</div>
+            <p>
+                Pole dance se věnuje 9 let a má zkušenosti
+                s výukou začátečnických i pokročilých skupin.
+                Zaměřuje se na techniku, silové prvky a choreografie.
+                V modelovém životopise má účast ve finále
+                soutěže Prague Pole Art.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">LN</div>
             <h3>Lucie Novotná</h3>
-            <div class="speciality">POLE DANCE · ADVANCED</div>
-            <p>Osmiletá pohybová praxe, zaměření na silové prvky a dynamické kombinace. Fiktivní ocenění: 2. místo v modelové soutěži Czech Pole Challenge.</p>
-        </div>
+            <div class="role">POLE DANCE · TECHNIQUE</div>
+            <p>
+                Sedm let se věnuje pole dance a specializuje
+                se na dynamické prvky, přechody a techniku.
+                Ve fiktivním profilu získala 2. místo
+                na soutěži Czech Pole Challenge.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">SV</div>
             <h3>Sabina Veselá</h3>
-            <div class="speciality">AERIAL HOOP</div>
-            <p>Specializuje se na vzdušnou akrobacii a práci s kruhem. Fiktivní ocenění: 1. místo v modelové soutěži Aerial Cup Prague.</p>
-        </div>
+            <div class="role">AERIAL HOOP</div>
+            <p>
+                Má šestiletou zkušenost se vzdušnou akrobacií.
+                Vede lekce aerial hoop pro začátečníky
+                i pokročilé. Zaměřuje se na techniku,
+                bezpečné provedení prvků a choreografie.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">TP</div>
-            <h3> Tereza Procházková</h3>
-            <div class="speciality">PILATES · FLEXIBILITY</div>
-            <p>Věnuje se Pilates, mobilitě a správnému držení těla. V modelovém profilu má pětiletou praxi a instruktorské vzdělání.</p>
-        </div>
+            <h3>Tereza Procházková</h3>
+            <div class="role">PILATES · MOBILITY</div>
+            <p>
+                Instruktorka Pilates s pětiletou praxí.
+                V lekcích se věnuje stabilizaci,
+                mobilitě a správnému provedení cviků.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">KH</div>
             <h3>Karolína Horáková</h3>
-            <div class="speciality">HIIT · FITNESS</div>
-            <p>Specializace na kondiční trénink a intervalové cvičení. Fiktivní profil: ocenění v modelové fitness soutěži Prague Fitness Cup.</p>
-        </div>
+            <div class="role">HIIT · FITNESS</div>
+            <p>
+                Specializuje se na kondiční přípravu
+                a intervalový trénink. Má šest let
+                zkušeností s vedením skupinových lekcí.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">EB</div>
             <h3>Eva Benešová</h3>
-            <div class="speciality">TRX · STRENGTH</div>
-            <p>Věnuje se funkčnímu posilování, TRX a silové přípravě. V modelovém profilu má sedmiletou trenérskou praxi.</p>
-        </div>
+            <div class="role">TRX · STRENGTH</div>
+            <p>
+                Zaměřuje se na funkční posilování,
+                TRX a silový rozvoj. Věnuje se také
+                individuálnímu přizpůsobení tréninku.
+            </p>
+        </article>
 
-        <div class="teacher">
+        <article class="teacher">
             <div class="initial">AD</div>
             <h3>Anna Dvořáková</h3>
-            <div class="speciality">POLE DANCE · CHOREOGRAPHY</div>
-            <p>Specializuje se na taneční výraz, flexibilitu a choreografie. Fiktivní ocenění: 3. místo v modelové soutěži Pole Dance Open.</p>
-        </div>
+            <div class="role">POLE DANCE · CHOREO</div>
+            <p>
+                Pole dance se věnuje šest let.
+                Specializuje se na taneční choreografie,
+                flexibilitu a plynulé pohybové kombinace.
+                Ve fiktivním profilu obsadila 3. místo
+                v soutěži Pole Dance Open.
+            </p>
+        </article>
 
     </div>
 </section>
@@ -570,9 +687,9 @@ footer .logo { font-size:30px; }
 
 <section class="schedule" id="schedule">
     <div class="heading">
-        <div class="eyebrow">WEEKLY SCHEDULE</div>
-        <h2>Rozvrh lekcí.</h2>
-        <p>Ukázkový týdenní program od pondělí do neděle.</p>
+        <div class="eyebrow">WEEKLY TIMETABLE</div>
+        <h2>Týdenní rozvrh</h2>
+        <p>Ukázkový program skupinových lekcí v průběhu celého týdne.</p>
     </div>
 
     <div class="schedule-grid">
@@ -581,40 +698,40 @@ footer .logo { font-size:30px; }
             <h3>PONDĚLÍ</h3>
             <div class="lesson"><strong>09:00 · Pilates</strong><span>Tereza</span></div>
             <div class="lesson"><strong>16:00 · Pole Dance</strong><span>Markéta</span></div>
-            <div class="lesson"><strong>18:00 · HIIT</strong><span>Karolína</span></div>
-            <div class="lesson"><strong>19:00 · Pole Dance</strong><span>Lucie</span></div>
+            <div class="lesson"><strong>17:30 · HIIT</strong><span>Karolína</span></div>
+            <div class="lesson"><strong>19:00 · Pole Choreo</strong><span>Anna</span></div>
         </div>
 
         <div class="day">
             <h3>ÚTERÝ</h3>
             <div class="lesson"><strong>09:00 · TRX</strong><span>Eva</span></div>
-            <div class="lesson"><strong>16:00 · Aerial Hoop</strong><span>Sabina</span></div>
-            <div class="lesson"><strong>18:00 · Pole Dance</strong><span>Anna</span></div>
-            <div class="lesson"><strong>19:00 · Pilates</strong><span>Tereza</span></div>
+            <div class="lesson"><strong>16:30 · Aerial Hoop</strong><span>Sabina</span></div>
+            <div class="lesson"><strong>18:00 · Pole Dance</strong><span>Lucie</span></div>
+            <div class="lesson"><strong>19:30 · Pilates</strong><span>Tereza</span></div>
         </div>
 
         <div class="day">
             <h3>STŘEDA</h3>
             <div class="lesson"><strong>09:00 · Pilates</strong><span>Tereza</span></div>
             <div class="lesson"><strong>16:00 · Pole Dance</strong><span>Markéta</span></div>
-            <div class="lesson"><strong>18:00 · HIIT</strong><span>Karolína</span></div>
+            <div class="lesson"><strong>17:30 · HIIT</strong><span>Karolína</span></div>
             <div class="lesson"><strong>19:00 · Aerial Hoop</strong><span>Sabina</span></div>
         </div>
 
         <div class="day">
             <h3>ČTVRTEK</h3>
             <div class="lesson"><strong>09:00 · TRX</strong><span>Eva</span></div>
-            <div class="lesson"><strong>16:00 · Pole Dance</strong><span>Lucie</span></div>
+            <div class="lesson"><strong>16:30 · Pole Dance</strong><span>Lucie</span></div>
             <div class="lesson"><strong>18:00 · Pilates</strong><span>Tereza</span></div>
-            <div class="lesson"><strong>19:00 · Pole Dance</strong><span>Anna</span></div>
+            <div class="lesson"><strong>19:30 · Pole Choreo</strong><span>Anna</span></div>
         </div>
 
         <div class="day">
             <h3>PÁTEK</h3>
             <div class="lesson"><strong>09:00 · HIIT</strong><span>Karolína</span></div>
             <div class="lesson"><strong>16:00 · Aerial Hoop</strong><span>Sabina</span></div>
-            <div class="lesson"><strong>17:00 · Pole Dance</strong><span>Markéta</span></div>
-            <div class="lesson"><strong>18:00 · Flexibility</strong><span>Anna</span></div>
+            <div class="lesson"><strong>17:30 · Pole Dance</strong><span>Markéta</span></div>
+            <div class="lesson"><strong>19:00 · Flexibility</strong><span>Anna</span></div>
         </div>
 
         <div class="day">
@@ -628,97 +745,96 @@ footer .logo { font-size:30px; }
             <h3>NEDĚLE</h3>
             <div class="lesson"><strong>10:00 · Pilates</strong><span>Tereza</span></div>
             <div class="lesson"><strong>12:00 · Pole Dance</strong><span>Markéta</span></div>
-            <div class="lesson"><strong>17:00 · Flexibility</strong><span>Anna</span></div>
+            <div class="lesson"><strong>16:00 · TRX</strong><span>Eva</span></div>
         </div>
 
     </div>
+
+    <p class="note">Rozvrh je ukázkový. Jednotlivé lekce je nutné rezervovat předem.</p>
 </section>
 
 <!-- CENÍK -->
 
-<section class="pricing" id="pricing">
+<section id="prices">
     <div class="heading">
-        <div class="eyebrow">MEMBERSHIP & PRICING</div>
-        <h2>Ceník lekcí.</h2>
-        <p>Vyber si variantu, která nejlépe vyhovuje tvému tempu.</p>
+        <div class="eyebrow">CENÍK</div>
+        <h2>Vstupy a permanentky</h2>
+        <p>Jednoduché možnosti pro jednorázové návštěvy i pravidelný trénink.</p>
     </div>
 
     <div class="price-grid">
 
         <div class="price-card">
             <h3>Jednorázový vstup</h3>
-            <div class="price">350 Kč</div>
+            <div class="price">320 Kč</div>
             <p>Jedna skupinová lekce v délce 60 minut.</p>
-            <a href="#contact" class="button">Mám zájem</a>
+            <small>Platnost při jedné návštěvě</small>
         </div>
 
         <div class="price-card featured">
             <h3>Permanentka 10 vstupů</h3>
-            <div class="price">2 900 Kč</div>
-            <p>Deset skupinových lekcí. Výhodnější cena za pravidelné cvičení.</p>
-            <a href="#contact" class="button">Mám zájem</a>
+            <div class="price">2 800 Kč</div>
+            <p>Deset skupinových lekcí podle vlastního výběru.</p>
+            <small>Platnost 3 měsíce</small>
         </div>
 
         <div class="price-card">
             <h3>Individuální lekce</h3>
-            <div class="price">900 Kč</div>
-            <p>60 minut osobního tréninku s vybranou lektorkou.</p>
-            <a href="#contact" class="button">Mám zájem</a>
+            <div class="price">850 Kč</div>
+            <p>Individuální trénink v délce 60 minut.</p>
+            <small>Po předchozí domluvě</small>
         </div>
 
     </div>
 </section>
 
-<!-- DOPLŇKOVÉ INFORMACE -->
+<!-- INFORMACE -->
 
 <section class="info">
     <div>
-        <div class="eyebrow">YOUR FIRST CLASS</div>
-        <h2>Každá cesta začíná prvním krokem.</h2>
+        <div class="eyebrow">FIRST VISIT</div>
+        <h2>První návštěva studia</h2>
         <p>
-            Nemáš žádné zkušenosti? Nevadí.
-            Naše lekce pro začátečnice jsou vhodné
-            i pro ty, které s pole dance nebo fitness
-            teprve začínají.
+            Na většinu začátečnických lekcí není potřeba
+            předchozí zkušenost. Lektorka na začátku
+            vysvětlí základní techniku a průběh cvičení.
         </p>
         <p>
-            Stačí pohodlné oblečení, chuť vyzkoušet
-            něco nového a trochu odvahy.
+            Na pole dance doporučujeme krátké legíny
+            a tílko. Na ostatní lekce pohodlné sportovní oblečení.
+        </p>
+        <p>
+            Doporučujeme dorazit přibližně 10 minut před začátkem.
         </p>
     </div>
 
-    <div class="contact-box">
-        <h3>Praktické informace</h3>
-        <p><strong>Studio:</strong> AVA Pole Dance Studio</p>
-        <p><strong>Lokalita:</strong> Praha 1, Česká republika</p>
-        <p><strong>Otevírací doba:</strong> Po–Pá 8:00–21:00</p>
-        <p><strong>Víkend:</strong> 9:00–18:00</p>
-        <p><strong>Rezervace:</strong> Po předchozí domluvě</p>
+    <div class="info-box">
+        <h3>Provozní informace</h3>
+        <p><strong>Pondělí–pátek:</strong> 8:00–21:00</p>
+        <p><strong>Sobota:</strong> 9:00–17:00</p>
+        <p><strong>Neděle:</strong> 9:00–18:00</p>
+        <p><strong>Lokalita:</strong> Praha 1</p>
+        <p><strong>Počet sálů:</strong> 3</p>
+        <p><strong>Rezervace:</strong> Předem na lekce</p>
     </div>
 </section>
 
 <!-- KONTAKT -->
 
-<section id="contact" class="info">
-    <div>
-        <div class="eyebrow">CONTACT US</div>
-        <h2>Uvidíme se ve studiu.</h2>
-        <p>
-            Máš otázky ohledně lekcí, rozvrhu
-            nebo individuálního tréninku?
-            Ozvi se nám.
-        </p>
-    </div>
+<section class="contact" id="contact">
+    <div class="eyebrow">CONTACT</div>
+    <h2>Kontakt a rezervace</h2>
+    <p>
+        Pro informace o lekcích a individuálních trénincích
+        nás můžeš kontaktovat.
+    </p>
 
-    <div class="contact-box">
-        <h3>AVA. Studio</h3>
-        <p><strong>Adresa:</strong> Doplň přesnou adresu, Praha 1</p>
-        <p><strong>E-mail:</strong> doplň kontaktní e-mail</p>
-        <p><strong>Telefon:</strong> doplň telefonní číslo</p>
+    <div class="info-box" style="max-width:480px;margin:auto;text-align:left">
+        <h3>AVA Studio</h3>
+        <p><strong>Adresa:</strong> Praha 1, Česká republika</p>
+        <p><strong>E-mail:</strong> info@ava-studio.cz</p>
+        <p><strong>Telefon:</strong> +420 777 123 456</p>
         <p><strong>Instagram:</strong> @ava.studio</p>
-        <p style="margin-top:20px">
-            <a href="#studio" class="button">Zpět na začátek ↑</a>
-        </p>
     </div>
 </section>
 
