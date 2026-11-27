@@ -2,16 +2,262 @@
 <!DOCTYPE html>
 <html lang="cs">
 <head>
-    <meta charset="UTF-8">
-    <title>AVA Studio</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AVA. | Pole Dance Studio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #eeeae3;
+    color: #302e2a;
+    font-family: 'DM Sans', sans-serif;
+}
+
+header {
+    padding: 28px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid #d8d0c5;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 35px;
+    letter-spacing: 6px;
+}
+
+.logo span {
+    color: #a99983;
+}
+
+header p {
+    font-size: 10px;
+    letter-spacing: 3px;
+    color: #82796e;
+}
+
+.hero {
+    min-height: 75vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 80px 20px;
+}
+
+.content {
+    max-width: 750px;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    color: #968673;
+    margin-bottom: 30px;
+}
+
+h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(55px, 9vw, 95px);
+    font-weight: 400;
+    line-height: 1.1;
+}
+
+h1 span {
+    color: #a99983;
+    font-style: italic;
+}
+
+.description {
+    max-width: 520px;
+    margin: 30px auto;
+    color: #746e66;
+    font-size: 15px;
+    line-height: 2;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 14px;
+    margin-top: 38px;
+}
+
+.button {
+    display: inline-block;
+    padding: 16px 27px;
+    background: #302e2a;
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    transition: .3s;
+}
+
+.button:hover {
+    background: #a99983;
+    transform: translateY(-3px);
+}
+
+.button-outline {
+    background: transparent;
+    border: 1px solid #302e2a;
+    color: #302e2a;
+}
+
+.button-outline:hover {
+    color: white;
+}
+
+.cards {
+    padding: 50px 8% 90px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+}
+
+.card {
+    background: #faf8f4;
+    padding: 35px 25px;
+    text-align: center;
+    border: 1px solid #ded8cf;
+    transition: .3s;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+}
+
+.card-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 34px;
+    color: #b5a590;
+}
+
+.card h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 25px;
+    font-weight: 400;
+    margin: 12px 0;
+}
+
+.card p {
+    font-size: 12px;
+    color: #82796e;
+    line-height: 1.8;
+}
+
+footer {
+    border-top: 1px solid #d8d0c5;
+    padding: 30px;
+    text-align: center;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: #82796e;
+}
+
+@media(max-width: 700px) {
+    header {
+        padding: 20px;
+    }
+
+    header p {
+        font-size: 8px;
+    }
+
+    .cards {
+        grid-template-columns: 1fr;
+        padding: 20px;
+    }
+
+    .hero {
+        min-height: 65vh;
+    }
+}
+</style>
 </head>
+
 <body>
 
-    <h1>AVA Pole Dance Studio</h1>
+<header>
+    <div class="logo">AVA<span>.</span></div>
+    <p>POLE DANCE & MOVEMENT STUDIO</p>
+</header>
 
-    <p>Vítejte na stránkách našeho pole dance studia v Praze 1. Nabízíme pole dance, aerial hoop a fitness lekce.</p>
+<main>
 
-    <a href="/prvnihodina.html">Otevřít dokument z předchozího úkolu</a>
+<section class="hero">
+    <div class="content">
+
+        <div class="small-title">
+            POLE DANCE STUDIO · PRAHA 1
+        </div>
+
+        <h1>
+            Objev svou sílu.<br>
+            Najdi svůj <span>pohyb.</span>
+        </h1>
+
+        <p class="description">
+            Vítej v AVA Pole Dance Studiu.
+            Vytvořili jsme prostor, kde se potkává
+            elegance, síla, sebevědomí a radost z pohybu.
+            Přijď objevovat nové možnosti svého těla.
+        </p>
+
+        <div class="buttons">
+
+            <a href="/prvnihodina.html" class="button">
+                Předchozí projekt
+            </a>
+
+            <a href="#nabidka" class="button button-outline">
+                Objev naše studio
+            </a>
+
+        </div>
+
+    </div>
+</section>
+
+<section class="cards" id="nabidka">
+
+    <div class="card">
+        <div class="card-number">01</div>
+        <h2>Pole Dance</h2>
+        <p>Síla, elegance a nové pohybové výzvy.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-number">02</div>
+        <h2>Aerial Hoop</h2>
+        <p>Objev krásu vzdušné akrobacie.</p>
+    </div>
+
+    <div class="card">
+        <div class="card-number">03</div>
+        <h2>Fitness</h2>
+        <p>HIIT, Pilates, TRX a funkční posilování.</p>
+    </div>
+
+</section>
+
+</main>
+
+<footer>
+    AVA. POLE DANCE & MOVEMENT STUDIO · PRAHA 1
+</footer>
 
 </body>
 </html>
