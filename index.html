@@ -4,186 +4,166 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>AVA. | Pole Dance Studio</title>
+<title>AVA. | Movement Studio</title>
 
-<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 
 <style>
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+* { margin:0; padding:0; box-sizing:border-box; }
 
 body {
-    background: #eeeae3;
-    color: #302e2a;
-    font-family: 'DM Sans', sans-serif;
+    background:#eae5dd;
+    color:#302e2a;
+    font-family:'DM Sans',sans-serif;
+    min-height:100vh;
 }
 
 header {
-    padding: 28px 8%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-bottom: 1px solid #d8d0c5;
+    height:95px;
+    padding:0 9%;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    border-bottom:1px solid #d6cec3;
 }
 
 .logo {
-    font-family: 'Playfair Display', serif;
-    font-size: 35px;
-    letter-spacing: 6px;
+    font-family:'Playfair Display',serif;
+    font-size:38px;
+    letter-spacing:7px;
 }
 
-.logo span {
-    color: #a99983;
-}
+.logo span { color:#aa9983; }
 
-header p {
-    font-size: 10px;
-    letter-spacing: 3px;
-    color: #82796e;
+.header-label {
+    font-size:9px;
+    letter-spacing:3px;
+    color:#83796d;
 }
 
 .hero {
-    min-height: 75vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    padding: 80px 20px;
+    min-height:650px;
+    padding:65px 9%;
+    display:grid;
+    grid-template-columns:1.1fr .9fr;
+    align-items:center;
+    gap:35px;
 }
 
-.content {
-    max-width: 750px;
-}
-
-.small-title {
-    font-size: 11px;
-    letter-spacing: 4px;
-    color: #968673;
-    margin-bottom: 30px;
+.eyebrow {
+    font-size:10px;
+    letter-spacing:4px;
+    color:#998873;
+    margin-bottom:30px;
 }
 
 h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(55px, 9vw, 95px);
-    font-weight: 400;
-    line-height: 1.1;
+    font-family:'Playfair Display',serif;
+    font-weight:400;
+    font-size:clamp(65px,8vw,110px);
+    line-height:.98;
+    letter-spacing:-3px;
 }
 
-h1 span {
-    color: #a99983;
-    font-style: italic;
+h1 em {
+    color:#a3927c;
+    font-weight:400;
 }
 
-.description {
-    max-width: 520px;
-    margin: 30px auto;
-    color: #746e66;
-    font-size: 15px;
-    line-height: 2;
+.subtitle {
+    margin-top:35px;
+    font-size:11px;
+    letter-spacing:4px;
+    color:#81776b;
 }
 
-.buttons {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 14px;
-    margin-top: 38px;
+.enter {
+    display:inline-block;
+    margin-top:42px;
+    padding:19px 34px;
+    background:#302e2a;
+    color:white;
+    text-decoration:none;
+    font-size:10px;
+    letter-spacing:2px;
+    transition:.35s;
 }
 
-.button {
-    display: inline-block;
-    padding: 16px 27px;
-    background: #302e2a;
-    color: white;
-    text-decoration: none;
-    font-size: 11px;
-    letter-spacing: 1.5px;
-    text-transform: uppercase;
-    transition: .3s;
+.enter:hover {
+    background:#a3927c;
+    transform:translateY(-5px);
 }
 
-.button:hover {
-    background: #a99983;
-    transform: translateY(-3px);
+.art {
+    height:440px;
+    background:#d6ccbd;
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    overflow:hidden;
+    animation:appear 1.2s ease;
 }
 
-.button-outline {
-    background: transparent;
-    border: 1px solid #302e2a;
-    color: #302e2a;
+.art::before {
+    content:"";
+    position:absolute;
+    width:270px;
+    height:360px;
+    border:1px solid rgba(255,255,255,.8);
+    border-radius:160px 160px 0 0;
 }
 
-.button-outline:hover {
-    color: white;
+.art::after {
+    content:"A";
+    font-family:'Playfair Display',serif;
+    font-size:340px;
+    font-style:italic;
+    color:rgba(255,255,255,.3);
 }
 
-.cards {
-    padding: 50px 8% 90px;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
+.art-caption {
+    position:absolute;
+    bottom:25px;
+    left:25px;
+    font-size:9px;
+    letter-spacing:3px;
+    color:#514a40;
 }
 
-.card {
-    background: #faf8f4;
-    padding: 35px 25px;
-    text-align: center;
-    border: 1px solid #ded8cf;
-    transition: .3s;
-}
-
-.card:hover {
-    transform: translateY(-6px);
-}
-
-.card-number {
-    font-family: 'Playfair Display', serif;
-    font-size: 34px;
-    color: #b5a590;
-}
-
-.card h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: 25px;
-    font-weight: 400;
-    margin: 12px 0;
-}
-
-.card p {
-    font-size: 12px;
-    color: #82796e;
-    line-height: 1.8;
+.side-number {
+    position:absolute;
+    right:9%;
+    top:45%;
+    writing-mode:vertical-rl;
+    font-size:9px;
+    letter-spacing:4px;
+    color:#a39480;
 }
 
 footer {
-    border-top: 1px solid #d8d0c5;
-    padding: 30px;
-    text-align: center;
-    font-size: 10px;
-    letter-spacing: 2px;
-    color: #82796e;
+    padding:25px 9%;
+    border-top:1px solid #d6cec3;
+    display:flex;
+    justify-content:space-between;
+    color:#82796d;
+    font-size:9px;
+    letter-spacing:2px;
 }
 
-@media(max-width: 700px) {
-    header {
-        padding: 20px;
-    }
+@keyframes appear {
+    from { opacity:0; transform:translateY(20px); }
+    to { opacity:1; transform:translateY(0); }
+}
 
-    header p {
-        font-size: 8px;
-    }
-
-    .cards {
-        grid-template-columns: 1fr;
-        padding: 20px;
-    }
-
-    .hero {
-        min-height: 65vh;
-    }
+@media(max-width:750px) {
+    .hero { grid-template-columns:1fr; padding:65px 7%; }
+    .art { height:330px; }
+    h1 { font-size:70px; }
+    header { padding:0 7%; }
+    .header-label { font-size:7px; letter-spacing:1px; }
+    .side-number { display:none; }
+    footer { gap:12px; flex-wrap:wrap; }
 }
 </style>
 </head>
@@ -192,71 +172,42 @@ footer {
 
 <header>
     <div class="logo">AVA<span>.</span></div>
-    <p>POLE DANCE & MOVEMENT STUDIO</p>
+    <div class="header-label">POLE DANCE & MOVEMENT STUDIO</div>
 </header>
 
 <main>
-
 <section class="hero">
-    <div class="content">
 
-        <div class="small-title">
-            POLE DANCE STUDIO · PRAHA 1
-        </div>
+    <div>
+        <div class="eyebrow">EST. IN PRAGUE · PRAHA 1</div>
 
         <h1>
-            Objev svou sílu.<br>
-            Najdi svůj <span>pohyb.</span>
+            MOVE<br>
+            WITH<br>
+            <em>CONFIDENCE.</em>
         </h1>
 
-        <p class="description">
-            Vítej v AVA Pole Dance Studiu.
-            Vytvořili jsme prostor, kde se potkává
-            elegance, síla, sebevědomí a radost z pohybu.
-            Přijď objevovat nové možnosti svého těla.
-        </p>
-
-        <div class="buttons">
-
-            <a href="/prvnihodina.html" class="button">
-                Předchozí projekt
-            </a>
-
-            <a href="#nabidka" class="button button-outline">
-                Objev naše studio
-            </a>
-
+        <div class="subtitle">
+            STRENGTH · ELEGANCE · MOVEMENT
         </div>
 
-    </div>
-</section>
-
-<section class="cards" id="nabidka">
-
-    <div class="card">
-        <div class="card-number">01</div>
-        <h2>Pole Dance</h2>
-        <p>Síla, elegance a nové pohybové výzvy.</p>
+        <a href="/prvnihodina.html" class="enter">
+            ENTER THE WORLD OF AVA &nbsp; ↗
+        </a>
     </div>
 
-    <div class="card">
-        <div class="card-number">02</div>
-        <h2>Aerial Hoop</h2>
-        <p>Objev krásu vzdušné akrobacie.</p>
-    </div>
-
-    <div class="card">
-        <div class="card-number">03</div>
-        <h2>Fitness</h2>
-        <p>HIIT, Pilates, TRX a funkční posilování.</p>
+    <div class="art">
+        <div class="art-caption">AVA STUDIO · PRAGUE</div>
     </div>
 
 </section>
 
+<div class="side-number">POLE DANCE · AERIAL · FITNESS</div>
 </main>
 
 <footer>
-    AVA. POLE DANCE & MOVEMENT STUDIO · PRAHA 1
+    <span>AVA. MOVEMENT STUDIO</span>
+    <span>PRAGUE · CZECH REPUBLIC</span>
 </footer>
 
 </body>
